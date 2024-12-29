@@ -105,7 +105,28 @@ nav ul {
     stroke-width: 1.5;
     width: 1.2rem;
     height: 1.2rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sun-icon {
+    opacity: 1;
+    position: absolute;
+}
+
+.moon-icon {
+    opacity: 0;
+    position: absolute;
+    transform: rotate(90deg);
+}
+
+[data-theme="dark"] .sun-icon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+[data-theme="dark"] .moon-icon {
+    opacity: 1;
+    transform: rotate(0);
 }
 
 [data-theme="dark"] #theme-toggle svg {
@@ -216,9 +237,9 @@ nav ul {
     transition: all 0.3s ease;
 }
 
-social-links a:hover {
-    background-color: #333;
-    color: #fff;
+.social-links a:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
     transform: translateY(-2px);
 }
 
