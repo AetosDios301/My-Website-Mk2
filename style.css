@@ -159,6 +159,15 @@ nav ul {
     margin: 0 auto;
 }
 
+.hero a {
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.hero a:hover {
+    text-decoration: underline;
+}
+
 .about {
     max-width: 1200px;
     margin: 0 auto;
